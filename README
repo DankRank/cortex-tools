@@ -1,0 +1,25 @@
+Crash Bandicoot - The Wrath of Cortex tools
+
+- Gapless BGM looping patch -
+This patch works on Crash Bandicoot - The Wrath of Cortex (USA) (v1.01)
+
+Original ISO SHA1: 43f1aacbc17429263e373be5f3dcc2e1cf103dfd
+Patched ISO SHA1:  6ed95200d9a8179a2f5db40d3c5d46bf5e12513a
+
+Apply the patch like so:
+    xdelta3 -d -s crash.iso gaplessu101iso.vcdiff gapless.iso
+
+If you have BIN/CUE (SHA1: e3be92c014f115b63db844042977e9719d0d5048), you can
+convert it to ISO like so:
+    ./xa2352to2048.py <crash.bin >crash.iso
+
+- Applying the patch manually -
+Use the patcher.py script:
+    ./patcher.py crash.iso gapless.iso
+
+It could work on other versions of the game, but we haven't tested it.
+
+- Other tools -
+cortex_sfx_extract.py: extracts the contents of sfx.dat 
+cortex_sfx_rebuild.py: rebuilds sfx.dat (uses index.txt)
+These two tools could be adapted for editing other dat files on the disk.
